@@ -21,15 +21,20 @@
     </form>
     <div id="message-area" class="row" style="display:none">
         <div> Joined as : <b> <span id="name">Not Set</span> </b></div>
+        <div> Connection ID : <b> <span id="connection-id">Not Set</span> </b></div>
+        <br />
+        <input type="text" id="message" class="form-control" placeholder="Type your message here" autocomplete="off" />
+        <br />
+        <input type="text" id="receiver-connection-id" class="form-control" placeholder="Enter receiver connection id here (optional)" autocomplete="off" />
+        <br />
+        <input type="button" class="btn btn-success" id="sendButton" value="Send Message" />
+        <br />
         <hr />
         <div class="row">
             <div class="col-6">
-                <ul id="messageList"></ul>
+                <ul id="messageList" class="list-group list-group-flush"></ul>
             </div>
         </div>
-        <input type="text" id="message" class="form-control" autocomplete="off" />
-        <br />
-        <input type="button" class="btn btn-success" id="sendButton" value="Send Message" />
     </div>
 </div>
 

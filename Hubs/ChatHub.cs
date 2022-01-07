@@ -12,5 +12,15 @@ namespace ChatAppSignalR.Hubs
         {
             await Clients.All.SendAsync("ReceiveMessage", username, message);
         }
+
+        public async Task SendMessageToUser(string receiverid, string username, string message)
+        {
+            await Clients.Client(receiverid).SendAsync("ReceiveMessage", username, message);
+        }
+
+        public string GetConnectionId()
+        {
+            return Context.ConnectionId;
+        }
     }
 }
